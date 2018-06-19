@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const getUsers = () => {
+export const getUsers = (cb) => {
   return (dispatch) => {
     axios.get('/api/users')
       .then( res => dispatch({ type: 'USERS', users: res.data }) )
